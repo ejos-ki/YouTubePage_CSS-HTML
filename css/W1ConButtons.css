@@ -1,0 +1,109 @@
+
+/* ----------------     BUTTONS  ---------------- */
+.buttonGroup {
+    height: 40px;
+
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+
+    padding: 25px;
+    margin-left: 70px;
+}
+
+.scroll {
+    display: flex;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media (max-width: 789px) {
+    .buttonGroup {
+       margin-left: 0px;
+       padding: 25px;
+    }
+
+    .buttonGroup .leftArrow {
+        padding-left: 20px;
+    }
+    
+    .buttonGroup .rightArrow {
+        padding-right: 15px;
+    }
+}
+
+.buttonGroup button {
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    height: 30px;
+
+    border-radius: 8px;
+    width: auto;
+    padding: 1px 10px 1px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    margin-right: 10px;
+}
+
+.buttonGroup .leftArrow {
+    width: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: linear-gradient(to right, black 65%, transparent);
+    flex-shrink: 0;
+
+    position: absolute;
+    left: 0;
+}
+
+.buttonGroup .rightArrow {
+    width: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: linear-gradient(to left, black 65%, transparent);
+    flex-shrink: 0;
+
+    position: absolute;
+    right: 0;
+}
+
+.leftArrow button, .rightArrow button {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color:rgba(87, 83, 83, 0);
+    border: none;
+}
+
+.leftArrow button div, .rightArrow button div {
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.rightArrow button div {
+    transform: rotate(135deg);
+    margin-left: 1px;
+}
+
+.leftArrow button div {
+    transform: rotate(312deg);
+    margin-left: 5.5px;
+}
